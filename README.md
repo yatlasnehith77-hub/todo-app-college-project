@@ -119,32 +119,24 @@ npm run preview
 
 ## 🌐 Deployment to GitHub Pages
 
-Because `vite.config.js` is pre-configured with `base: './'`, deploying this project to GitHub Pages is quick and simple:
+This project is configured for automated deployment via GitHub Actions:
 
-1. Create a new repository on your GitHub account (e.g., `todo-app`).
-2. Initialize git and push your code:
+1. **Repository**: [https://github.com/yatlasnehith77-hub/todo-app-college-project](https://github.com/yatlasnehith77-hub/todo-app-college-project)
+2. **Vite Base Path**: Configured as `/todo-app-college-project/` in `vite.config.js`.
+3. **Workflow**: Automated build & deployment defined in `.github/workflows/deploy.yml`.
+
+### Enabling GitHub Pages in Repository Settings:
+1. Open your repository at: [https://github.com/yatlasnehith77-hub/todo-app-college-project/settings/pages](https://github.com/yatlasnehith77-hub/todo-app-college-project/settings/pages)
+2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+3. Push your commits to `main`:
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit: Recreated Todo App"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-   git push -u origin main
+   git commit -m "Configure GitHub Pages deployment"
+   git push origin main
    ```
-3. Build the project:
-   ```bash
-   npm run build
-   ```
-4. Deploy the `dist` folder to GitHub Pages:
-   - You can use the `gh-pages` package:
-     ```bash
-     npm install -D gh-pages
-     npx gh-pages -d dist
-     ```
-   - Or configure GitHub Actions under **Settings > Pages > Build and deployment > Source: GitHub Actions**.
-
-Your live app will be accessible at:
-`https://<your-username>.github.io/<your-repo-name>/`
+4. The GitHub Action will automatically trigger, build the project, and publish it.
+5. Your live app will be available at:
+   `https://yatlasnehith77-hub.github.io/todo-app-college-project/`
 
 ---
 
